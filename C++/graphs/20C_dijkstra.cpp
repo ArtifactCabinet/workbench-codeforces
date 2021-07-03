@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define _MAX 100005
+#define MAX 100005
 
 // TODO: better implementation
 
 typedef long long ll;
 ll n,m,a,b,between_distance;
-ll travel_len[_MAX],path[_MAX];
+ll travel_len[MAX],path[MAX];
 map <pair<ll, ll> ,ll> lengths;
-vector<ll>links[_MAX];
+vector<ll>links[MAX];
 
 void f (ll x)
 {
@@ -30,7 +30,7 @@ int main ()
     }
 
     // we want shortest path, thus we can set travel length to n as maximum.
-    fill_n(travel_len, _MAX, std::numeric_limits<long long int>::max());
+    fill_n(travel_len, MAX, std::numeric_limits<long long int>::max());
 
     priority_queue<ll> q;
     q.push(1); //beginning node
